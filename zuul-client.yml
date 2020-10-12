@@ -1,3 +1,5 @@
+#环境
+env: dev
 #网关路由规则信息
 zuul:
   prefix: /api/v1/
