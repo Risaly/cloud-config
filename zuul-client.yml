@@ -1,0 +1,8 @@
+#网关路由规则信息
+zuul:
+  prefix: /api/v1/
+  routes:
+    order-client: /order/**
+    product-client: /product/**
+  ignored-patterns: /*-client/**
+  sensitive-headers:
