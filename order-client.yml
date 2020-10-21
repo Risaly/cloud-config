@@ -1,5 +1,5 @@
 #环境
-env: main
+env: test
 #ribbon自定义负载均衡策略,默认是轮询，改为随机
 product-client:
   ribbon:
