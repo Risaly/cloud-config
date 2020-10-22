@@ -1,5 +1,5 @@
 #配置标识,测试用
-env: config1.8
+env: config1.9
 #ribbon自定义负载均衡策略,默认是轮询，改为随机
 product-client:
   ribbon:
