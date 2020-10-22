@@ -1,5 +1,5 @@
-#环境
-env: main
+#配置标识,测试用
+env: config1.6
 #ribbon自定义负载均衡策略,默认是轮询，改为随机
 product-client:
   ribbon:
@@ -28,3 +28,16 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 3000
+spring:
+  #消息总线添加rabbitmq配置,前提是先启动rabbitmq服务
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#开启所有访问，包括bus-refresh的任务
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
