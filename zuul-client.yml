@@ -1,5 +1,5 @@
-#环境
-env: test
+#配置标识,测试用
+env: config1.6
 #网关路由规则信息
 zuul:
   prefix: /api/v1/
@@ -8,3 +8,16 @@ zuul:
     product-client: /product/**
   ignored-patterns: /*-client/**
   sensitive-headers:
+spring:
+  #消息总线添加rabbitmq配置,前提是先启动rabbitmq服务
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#开启所有访问，包括bus-refresh的任务
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
