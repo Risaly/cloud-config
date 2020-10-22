@@ -1,5 +1,5 @@
-#环境
-env: dev
+#配置标识,测试用
+env: config1.6
 #网关路由规则信息
 zuul:
   prefix: /api/v1/
